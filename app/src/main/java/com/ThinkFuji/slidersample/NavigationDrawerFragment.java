@@ -33,6 +33,7 @@ public class NavigationDrawerFragment extends Fragment {
     /**
      * Remember the position of the selected item.
      */
+    //Taco
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
 
     /**
