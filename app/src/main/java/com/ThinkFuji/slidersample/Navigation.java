@@ -5,20 +5,13 @@ import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class Navigation extends Activity
@@ -53,8 +46,22 @@ public class Navigation extends Activity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
+        Fragment fragment = new Introduction();
+        switch (position) {
+            case 1:
+                fragment = new WhatIsBitcoin();
+                mTitle = "What is Bitcoin?";
+                break;
+            case 2:
+                fragment = new BuySell();
+                mTitle = "Buy/Sell";
+                break;
+            case 3:
+                fragment = new BuyBook();
+                mTitle = "Buy the book";
+        }
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, fragment)
                 .commit();
     }
 
@@ -62,28 +69,22 @@ public class Navigation extends Activity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-                /*mNavigationDrawerFragment = (NavigationDrawerFragment)
-                        getFragmentManager().findFragmentById(R.layout);*/
-               /* mTitle = getTitle();
-
-                // Set up the drawer.
-                mNavigationDrawerFragment.setUp(
-                        R.id.navigation_drawer,
-                        (DrawerLayout) findViewById(R.layout.what_is));*/
-
+                System.out.println("Introduction clicked");
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                System.out.println("Clicked");
+                System.out.println("what is clicked");
 
 
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                System.out.println("Buy/Sell clicked");
                 break;
 
             case 4:
                 mTitle = getString(R.string.title_section4);
+                System.out.println("Buy my book clicked");
                 break;
         }
     }
@@ -119,7 +120,6 @@ public class Navigation extends Activity
             return true;
         }
         return super.onOptionsItemSelected(item);
-        //Idk
     }
 
     /**
@@ -150,7 +150,7 @@ public class Navigation extends Activity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_navigation, container, false);
+            View rootView = inflater.inflate(R.layout.introduction, container, false);
             return rootView;
         }
 

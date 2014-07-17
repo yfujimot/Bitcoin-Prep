@@ -4,7 +4,7 @@ package com.ThinkFuji.slidersample;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -202,30 +202,6 @@ public class NavigationDrawerFragment extends Fragment {
             mCallbacks.onNavigationDrawerItemSelected(position);
         }
 
-        switch(position) {
-            case 1:
-                System.out.println("Taco");
-                Fragment fragment = new what_is();
-                //Bundle args = new Bundle();
-                //args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
-                //fragment.setArguments(args);
-
-                // Insert the fragment by replacing any existing fragment
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.navigation_drawer, fragment)
-                        .commit();
-
-                // Highlight the selected item, update the title, and close the drawer
-                //mDrawerList.setItemChecked(position, true);
-                //setTitle(mPlanetTitles[position]);
-                //mDrawerLayout.closeDrawer(mDrawerList);
-                break;
-            case 2:
-
-                break;
-            default:
-        }
     }
 
     @Override
