@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Unlock the rest for $29"
+        android:id="@+id/buyDescription"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:typeface="normal"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_weight="0.36"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="162dp"
+            android:layout_height="212dp"
+            android:id="@+id/bookCover"
+            android:src="@drawable/bitcoin_riches"
+            android:clickable="false"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.10" />
+
+        <TextView
+            android:layout_width="161dp"
+            android:layout_height="217dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Further Details on:\n-Mining\n-Trading\n-Business"
+            android:id="@+id/textView3"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Now"
+        android:id="@+id/orderButton"
+        android:layout_gravity="center_horizontal"
+        android:typeface="normal"
+        style="@style/AppTheme"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_marginTop="0dp"
+        android:onClick="openBookPage"/>
+</LinearLayout>
