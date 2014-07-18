@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.TextView;
 
 
 public class Navigation extends Activity
@@ -73,6 +74,10 @@ public class Navigation extends Activity
         startActivity(intent);
     }
 
+    public void change(View view) { //This will eventually become an in-app order handler
+        TextView textView = (TextView) findViewById(R.id.bitcoinPrices);
+        textView.setText("Machines");
+    }
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:

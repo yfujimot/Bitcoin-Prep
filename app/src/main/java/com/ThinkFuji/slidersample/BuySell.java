@@ -14,9 +14,12 @@ public class BuySell extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.introduction,
+        View view = inflater.inflate(R.layout.buy_sell,
                 container, false);
         return view;
     }
 
+    public void fetchPrices() {
+
+    }
 }
