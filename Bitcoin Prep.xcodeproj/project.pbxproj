@@ -13,6 +13,7 @@
 		927E34B5198FD8B000C72BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E34B3198FD8B000C72BD0 /* Main.storyboard */; };
 		927E34B7198FD8B000C72BD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927E34B6198FD8B000C72BD0 /* Images.xcassets */; };
 		927E34C3198FD8B000C72BD0 /* Bitcoin_PrepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E34C2198FD8B000C72BD0 /* Bitcoin_PrepTests.swift */; };
+		927E34CD198FDA8D00C72BD0 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E34CC198FDA8D00C72BD0 /* FirstView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		927E34BC198FD8B000C72BD0 /* Bitcoin PrepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitcoin PrepTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E34C1198FD8B000C72BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927E34C2198FD8B000C72BD0 /* Bitcoin_PrepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin_PrepTests.swift; sourceTree = "<group>"; };
+		927E34CC198FDA8D00C72BD0 /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				927E34C1198FD8B000C72BD0 /* Info.plist */,
+				927E34CC198FDA8D00C72BD0 /* FirstView.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927E34C3198FD8B000C72BD0 /* Bitcoin_PrepTests.swift in Sources */,
+				927E34CD198FDA8D00C72BD0 /* FirstView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
